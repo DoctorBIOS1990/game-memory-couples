@@ -24,6 +24,7 @@ let intentos = 0;
 let sonidos = document.querySelector("#sonidos");
 let fondo = document.querySelector("#fondo");
 let escuchar = document.querySelector("#escuchar");
+let $btn_restart = document.querySelector("#restart");
 let span_intentos = document.querySelector("#intentos");
 const $btn_again = document.querySelector("#btnAgain");
 const $section = document.querySelector('section')
@@ -157,6 +158,11 @@ $a.addEventListener('click', () =>{
 $btn_again.addEventListener('click', () =>{
   $btn_again.classList.add('hide');
   beginGame();
+})
+
+$btn_restart.addEventListener('click', () =>{
+  reiniciarJuego();
+  fondo.play();
 })
 
 const beginGame = () => {
