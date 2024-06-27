@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Parejas - JBU</title>
+    <link rel="stylesheet" href="css/style.css">
+
+	<link rel="shortcut icon" href="img/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <section>
+        <p id="go"></p>
+        <a>Start Duel</a>
+        <a id="btnAgain">Continue...</a>
+        
+    </section>
+
+    <div class="container">
+        <center>
+            <h2>
+                Succesful: <span>0</span> / <span id="intentos">0</span> Attemps.
+            </h2>
+        </center>
+        <hr>
+
+        <div class="cards">
+            <li class="card">
+               <div class="view front-view"></div> 
+               <div class="view back-view">
+                   <img src="img/1.jpg" alt="">
+               </div> 
+            </li>
+            <li class="card">
+               <div class="view front-view"></div> 
+               <div class="view back-view">
+                     <img src="img/2.jpg" alt="">
+               </div> 
+            </li>
+            <li class="card">
+               <div class="view front-view"></div> 
+               <div class="view back-view">
+                     <img src="img/3.jpg" alt="">
+               </div> 
+            </li>
+            <li class="card">
+               <div class="view front-view"></div> 
+               <div class="view back-view">
+                   <img src="img/4.jpg" alt="">
+               </div> 
+            </li>
+            <li class="card">
+               <div class="view front-view"></div> 
+               <div class="view back-view">
+                    <img src="img/5.jpg" alt="">
+               </div> 
+            </li>
+            <li class="card">
+               <div class="view front-view"></div> 
+               <div class="view back-view">
+                    <img src="img/6.jpg" alt="">
+               </div> 
+            </li>
+            <li class="card">
+               <div class="view front-view"></div> 
+               <div class="view back-view">
+                   <img src="img/7.jpg" alt="">
+               </div> 
+            </li>
+            <li class="card">
+               <div class="view front-view"></div> 
+               <div class="view back-view">
+                   <img src="img/8.jpg" alt="">
+               </div> 
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="img/1.jpg" alt="">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="img/2.jpg" alt="">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="img/3.jpg" alt="">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="img/4.jpg" alt="">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="img/5.jpg" alt="">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="img/6.jpg" alt="">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="img/7.jpg" alt="">
+                </div>
+            </li>
+            <li class="card">
+                <div class="view front-view"></div>
+                <div class="view back-view">
+                    <img src="img/8.jpg" alt="">
+                </div>
+            </li>
+        </div>
+        <hr>
+        <center>
+            <a onclick="javascript:reiniciarJuego();"><button>Restart</button></a>
+            <button id="escuchar">Quit Music</button>
+            <p>Developer by: Jorge Benito Ugás</p>
+        </center>
+    </div>
+
+    <audio id="fondo" loop src="sounds/background.mp3" type="audio/mpeg" "/>
+    <audio id="sonidos" src="" type="audio/mpeg"/>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html
