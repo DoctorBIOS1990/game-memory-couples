@@ -63,8 +63,8 @@ const sonIguales = (imagen1, imagen2) => {
           setTimeout(() => {
                 $go.innerHTML = "";
                 $btn_again.classList.remove('hide');
-          },1000);
-      }, 1800);
+          },3000);
+      }, 1500);
     }
 
     tar_1.removeEventListener("click", darVuelta);
