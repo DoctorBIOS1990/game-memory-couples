@@ -27,9 +27,10 @@ let escuchar = document.querySelector("#escuchar");
 let $btn_restart = document.querySelector("#restart");
 let span_intentos = document.querySelector("#intentos");
 const $btn_again = document.querySelector("#btnAgain");
-const $section = document.querySelector('section')
-const $a = document.querySelector('a')
-const $go = document.querySelector("#go")
+const $section = document.querySelector('section');
+const $a = document.querySelector('a');
+const $go = document.querySelector("#go");
+const $title = document.querySelector("#title");
 
 
 const sonidoDeFondo = (e) => {
@@ -54,6 +55,7 @@ const sonIguales = (imagen1, imagen2) => {
       num_parejas.innerHTML = parejas;
       
     if (parejas === 8) {
+      fondo.volume = 0.0;
       sonidos.src = "sounds/win.mp3";
       sonidos.play();
             
@@ -166,10 +168,16 @@ $btn_restart.addEventListener('click', () =>{
 })
 
 const beginGame = () => {
+  $title.classList.add('hide');
   playSound()
   $a.remove()
   fondo.play()
-  $go.innerHTML = "Itˋs time to duel."
+
+  setTimeout(() => {
+      $title.remove();
+      return $go.innerHTML = "Itˋs time to duel.";
+ },1000);  
+
   setTimeout(() => {
      return $section.classList.add('hide');
   }, 3900);  

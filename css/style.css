@@ -60,13 +60,14 @@ button:hover{
     color:white;
     opacity:80%;
     border: 2px solid white;
-
 }
+
 .cards, .card, .view{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .cards{
     height: 480px;
     width: 480px;
@@ -82,6 +83,7 @@ button:hover{
     height: calc(100% / 4 - 10px);
     width: calc(100% / 4 - 10px);
 }
+
 .cards .card .view{
     position:absolute;
     background-color: #fff;
@@ -131,10 +133,13 @@ section{
     color:white;
     z-index: 1;
     opacity: 80%;
+    transition: opacity 1s ease-in-out;
 }
 
 section.hide{
-    display: none;
+    opacity: 0;
+    z-index: 0;
+    /*display: none;*/
 }
 
 section a{
@@ -148,16 +153,26 @@ section a{
     margin-bottom: 10px;
     transition: all .50s ease;
     text-align: center;
+    /*width: 20%;*/
 }
 
 section a:hover{
     border:black 2px solid;
     background: white;
     cursor: pointer;
-    transform:scale(2.1);
+    /*transform:scale(2.1);*/
     cursor: pointer;
     color: black;
 }
+
+#title{
+   width: 90%;
+   transition: opacity 1s ease-in-out;
+}
+
+#title.hide{
+    opacity:0;
+ }
 
 #intentos{
     color:red;
@@ -169,6 +184,16 @@ span{
 
 #go{
     font-weight: bold;
+}
+
+#btnAgain{
+    display: contents;
+    font-weight: bold;
+}
+
+#btnAgain:Hover{
+    color:  rgb(210, 174, 67);
+    transform:scale(2.1);
 }
 
 #btnAgain.hide{
