@@ -186,18 +186,14 @@ span{
     font-weight: bold;
 }
 
-#btnAgain{
+#btnAgain, #btnNot{
     display: contents;
     font-weight: bold;
 }
 
-#btnAgain:Hover{
+#btnAgain:Hover, #btnNot:Hover{
     color:  rgb(210, 174, 67);
-    transform:scale(2.1);
-}
-
-#btnAgain.hide{
-    display:none;   
+    text-decoration: underline;
 }
 
 center p{

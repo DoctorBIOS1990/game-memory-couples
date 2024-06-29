@@ -1,3 +1,4 @@
+// Locks Events 
 const disabledKeys = ["u", "I"];
 
 const showAlert = (e) => {
@@ -15,6 +16,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+// Vars
 const cards = document.querySelectorAll(".card");
 const num_parejas = document.querySelector(".container h2 span");
 let tar_1, tar_2;
@@ -27,13 +29,15 @@ let escuchar = document.querySelector("#escuchar");
 let $btn_restart = document.querySelector("#restart");
 let span_intentos = document.querySelector("#intentos");
 const $btn_again = document.querySelector("#btnAgain");
+const $btn_not = document.querySelector("#btnNot");
 const $section = document.querySelector('section');
 const $a = document.querySelector('a');
 const $go = document.querySelector("#go");
 const $title = document.querySelector("#title");
 
 
-const sonidoDeFondo = (e) => {
+//Buttons Mute/Unmute Music
+const sonidoDeFondo = (e) => {  
   if (fondo.volume == 0.0) {
     fondo.volume = 0.5;
     return (escuchar.innerHTML = "Quit Music");
@@ -42,9 +46,8 @@ const sonidoDeFondo = (e) => {
   return (escuchar.innerHTML = "Active Music");
 };
 
-escuchar.addEventListener("click", sonidoDeFondo);
-
-const sonIguales = (imagen1, imagen2) => {
+// Check Cards
+const sonIguales = (imagen1, imagen2) => {  
     intentos++;
     span_intentos.innerHTML = intentos;
   if (imagen1 === imagen2) {
@@ -63,8 +66,9 @@ const sonIguales = (imagen1, imagen2) => {
         $section.classList.remove('hide');
         $go.innerHTML = "You Win.";
           setTimeout(() => {
-                $go.innerHTML = "";
-                $btn_again.classList.remove('hide');
+                $go.innerHTML = "Let's again?";
+                $btn_again.innerHTML = "Yes";
+                $btn_not.innerHTML = "No";
           },3000);
       }, 1500);
     }
@@ -91,7 +95,8 @@ const sonIguales = (imagen1, imagen2) => {
   }, 1500);
 };
 
-const darVuelta = (e) => {
+// Movement Cards
+const darVuelta = (e) => {  
   let tarjeta = e.target;
   if (tarjeta !== tar_1 && !deshabilitarCartas) {
     tarjeta.classList.add("vuelta");
@@ -106,7 +111,8 @@ const darVuelta = (e) => {
   }
 };
 
-const reiniciarJuego = () => {
+// Restarting Game
+const reiniciarJuego = () => { 
   fondo.src = "sounds/background.mp3";
   fondo.volume = 0.5;
 
@@ -139,7 +145,8 @@ tarjeta.addEventListener("click", darVuelta);
 
 });
 
-const playSound = function() { // Temp audio
+// Temp Begin audio
+const playSound = function() { 
   let element = document.createElement('div');
   element.setAttribute('style', 'display: none');
   element.innerHTML = `
@@ -157,17 +164,26 @@ $a.addEventListener('click', () =>{
   beginGame();
 })
 
-$btn_again.addEventListener('click', () =>{
-  $btn_again.classList.add('hide');
+// Lets Again ?
+$btn_again.addEventListener('click', () =>{ // BUTTON (YES)
+  $go.innerHTML = "";
+  $btn_again.innerHTML = "";
+  $btn_not.innerHTML = "";
   beginGame();
 })
 
-$btn_restart.addEventListener('click', () =>{
+$btn_not.addEventListener('click', () =>{ // BUTTON (NO)
+  window.location.reload();
+})
+
+// Button Restart
+$btn_restart.addEventListener('click', () =>{ 
   reiniciarJuego();
   fondo.play();
 })
 
-const beginGame = () => {
+// Begining Game
+const beginGame = () => {   
   $title.classList.add('hide');
   playSound()
   $a.remove()
@@ -183,4 +199,4 @@ const beginGame = () => {
   }, 3900);  
 }
 
-$btn_again.classList.add('hide');
+escuchar.addEventListener("click", sonidoDeFondo);
