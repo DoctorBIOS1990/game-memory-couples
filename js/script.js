@@ -67,8 +67,8 @@ const sonIguales = (imagen1, imagen2) => {
         $go.innerHTML = "You Win.";
           setTimeout(() => {
                 $go.innerHTML = "Let's again?";
-                $btn_again.innerHTML = "Yes";
-                $btn_not.innerHTML = "No";
+                $btn_again.innerHTML = "Yes ";
+                $btn_not.innerHTML = " No";
           },3000);
       }, 1500);
     }
