@@ -106,6 +106,7 @@ section{
     background: black;
     width:100vw;
     height:100hw;
+    min-height: 100vh;
     top:0;
     inset:0;
     display: grid;
