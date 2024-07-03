@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','Monterrat', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: None;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image:url(../img/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #202020;
+}
+
+h2{
+  margin-top: 10px;  
+}
+
+hr{
+    margin-top: 5px;    
+    margin-bottom: 10px;    
+}
+
+.container{
+    background-color: rgb(77, 61, 81);
+    border-radius: 15px;
+    padding:20px, 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color:white;
+    opacity:90%;
+    border: 2px solid white;
+}
+
+.cards, .card, .view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards{
+    height: 480px;
+    width: 480px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards .card{
+    position: relative;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    height: calc(100% / 4 - 10px);
+    width: calc(100% / 4 - 10px);
+}
+
+.cards .card .view{
+    position:absolute;
+    /*background-color: #fff;*/
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    transition: transform 0.25s linear;
+    user-select: none;
+    pointer-events: none;
+}
+
+.card .front-view {  
+    background-image: url(../img/0.png);
+    background-size: contain;
+}
+
+.card .back-view {
+    transform: rotateY(-180deg);
+}
+
+.card.vuelta .back-view {
+    transform: rotateY(0);
+}
+.card.vuelta .front-view {
+    transform: rotateY(180deg);
+}
+
+.card .back-view img {
+    max-width: 110px;
+}
+
+.card.moverse{
+    animation: moverse 0.35s ease-in-out;
+}
+
+section{
+    position : absolute;
+    background: black;
+    width:100vw;
+    height:100hw;
+    min-height: 100vh;
+    top:0;
+    inset:0;
+    display: grid;
+    font-size: 48px;
+    place-content: center;
+    color:white;
+    z-index: 1;
+    opacity: 90%;
+    transition: opacity 1s ease-in-out;
+}
+
+section.hide{
+    opacity: 0;
+    z-index: 0;
+    /*display: none;*/
+}
+
+#start{
+    padding: 14px;
+    background-image: -webkit-gradient(linear, left top, left bottom, 
+    color-stop(0%,rgb(186, 67, 210)), color-stop(99%,rgb(14, 14, 14)));
+    border:white 2px solid;
+    outline: none;
+    font-size: 30px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all .50s ease;
+    text-align: center;
+}
+
+#start:hover{
+    border:black 2px solid;
+    background: white;
+    cursor: pointer;
+    cursor: pointer;
+    color: black;
+}
+
+#title{
+   width: 90%;
+   transition: opacity 1s ease-in-out;
+}
+
+#title.hide{
+    opacity:0;
+ }
+
+#intentos{
+    color:red;
+}
+
+span{
+    color: greenyellow;
+}
+
+#go{
+    font-weight: bold;
+}
+
+button{
+    margin-bottom: 3px;
+    padding:3px;
+    padding-right:3px;
+    background-color: rgb(143, 51, 161);
+    border:white solid 2px;
+    color:white;
+    transition: 0.5s ease-in-out;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+button:hover{
+    cursor:pointer;
+    background-color: white;
+    border:black solid 2px;
+    color:black;
+}
+
+#btnAgain, #btnNot{
+    display: contents;
+    font-weight: bold;
+    color:  white;
+    padding: 14px;
+    font-size: 30px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all .50s ease;
+    text-align: center;
+}
+
+#btnNot:Hover, #btnAgain:Hover{
+    cursor: pointer;
+    color:  rgb(186, 67, 210);
+    text-decoration: underline;
+}
+
+center p{
+    margin-bottom: 3px;
+    padding:3px;
+    padding-right:3px;
+}
+
+/**************************************************/
+
+@keyframes moverse
+    {
+        0%, 100%{transform: translateX(0);}
+        20% {transform: translateX(-13px);}
+        40% {transform: translateX(13px);}
+        60% {transform: translateX(-8px);}
+        80% {transform: translateX(8px);}
+    }
+
+@media(width < 1024px){
+    .cards{
+        height: 350px;
+        width: 350px;
+    }
+
+    .card .back-view img {
+        max-width: 80px;
+    }
+}
+
+@media(width > 1366px){
+    .cards{
+        height: 580px;
+        width: 580px;
+    }
+
+    .card .back-view img {
+        max-width: 135px;
+    }
+}
