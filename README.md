@@ -1,4 +1,5 @@
-# :mahjong: Juego de parejas de Yugi-OH!
+# :mahjong:Couples game for childrens. Tematic: Yu-Gi-Oh!
+
 > [!NOTE]
 > <p>My Score: <strong>13</strong> Attemps. :grin:</p>
 
