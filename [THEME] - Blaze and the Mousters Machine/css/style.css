@@ -12,7 +12,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image:url(../img/Background.jpg);
+    background-image:url(../img/Background.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -73,7 +73,7 @@ hr{
 }
 
 .card .front-view {  
-    background-image: url(../img/0.png);
+    background-image: url(../img/0.webp);
     background-size: contain;
 }
 
