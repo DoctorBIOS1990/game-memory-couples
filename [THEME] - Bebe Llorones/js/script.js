@@ -134,7 +134,7 @@ const reiniciarJuego = () => {
   cards.forEach((tarjeta, index) => {
     tarjeta.classList.remove("vuelta");
     let img = tarjeta.querySelector("img");
-    img.src = `img/img-${fichas[index]}.jpg`;
+    img.src = `img/img-${fichas[index]}.webp`;
     tarjeta.addEventListener("click", darVuelta);
   });
 };
