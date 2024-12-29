@@ -12,7 +12,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image:url(../img/Backgrounds/1.jpg);
+    background-image:url(../img/Backgrounds/1.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -78,7 +78,7 @@ hr{
 }
 
 .card .front-view {  
-    background-image: url(../img/0.jpg);
+    background-image: url(../img/0.webp);
     background-size: contain;
 }
 
@@ -213,12 +213,12 @@ center p{
 
 /*  TRANSITION BACKGROUND*/
 @KEYFRAMES transition{
-    5%{background-image: url("../img/Backgrounds/2.jpg");}
-    25%{background-image: url("../img/Backgrounds/3.jpg");}
-    50%{background-image: url("../img/Backgrounds/4.jpg");}
-    75%{background-image: url("../img/Backgrounds/7.jpg");}
-    85%{background-image: url("../img/Backgrounds/8.jpg");}
-    100%{background-image: url("../img/Backgrounds/1.jpg");}
+    5%{background-image: url("../img/Backgrounds/2.webp");}
+    25%{background-image: url("../img/Backgrounds/3.webp");}
+    50%{background-image: url("../img/Backgrounds/4.webp");}
+    75%{background-image: url("../img/Backgrounds/7.webp");}
+    85%{background-image: url("../img/Backgrounds/8.webp");}
+    100%{background-image: url("../img/Backgrounds/1.webp");}
 }
 
 @keyframes moverse

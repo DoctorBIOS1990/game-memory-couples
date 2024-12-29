@@ -3,7 +3,7 @@ const disabledKeys = ["u", "I"];
 
 const showAlert = (e) => {
   e.preventDefault();
-  return alert("No puede ver o copiar código fuente de esta manera!");
+  return alert("Jajajaja, no puede ver o copiar código fuente de esta manera!");
 };
 
 document.addEventListener("contextmenu", (e) => {
@@ -134,7 +134,7 @@ const reiniciarJuego = () => {
   cards.forEach((tarjeta, index) => {
     tarjeta.classList.remove("vuelta");
     let img = tarjeta.querySelector("img");
-    img.src = `img/img-${fichas[index]}.png`;
+    img.src = `img/img-${fichas[index]}.webp`;
     tarjeta.addEventListener("click", darVuelta);
   });
 };
